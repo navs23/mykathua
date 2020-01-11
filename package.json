@@ -9,7 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "cd mykathua-app && npm run build",
+    
     "start": "cd server && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
