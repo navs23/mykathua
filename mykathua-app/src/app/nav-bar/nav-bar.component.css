@@ -1,0 +1,10 @@
+.nav-bar-header{
+
+    /* background-image: url('/assets/images/kth-main.png') !important; */
+min-height: 100px;
+    background-color: rgb(255, 196, 0);
+}
+
+.kth-home{
+    color:rgb(255, 145, 0);
+}

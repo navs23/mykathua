@@ -1,0 +1,28 @@
+<div class="container"> 
+  <div class="clr-row" style="background-color: none;" >
+
+    <div class="clr-col-6" style="background-color: none;" *ngFor="let vid of videos;let index = index" >
+      <!-- <div class="card"> -->
+          <!-- <div class="card-header">#{{index}}-{{vid.snippet.title}}</div> -->
+             
+              <!-- <div class="card-block"> -->
+                  <youtube-player
+                  [videoId]="vid.id.videoId"
+                  (ready)="savePlayer($event)"
+                  (change)="onStateChange($event)"
+                  [playerVars]="playerVars">
+              </youtube-player>
+              <br/>
+              <!-- <span>
+                {{vid.snippet.description}}</span> -->
+              <!-- </div> -->
+              <!-- <div class="card-text">{{vid.snippet.description}}</div> -->
+      <!-- </div> -->
+
+  
+</div>
+  </div> 
+
+</div>
+
+

@@ -1,0 +1,59 @@
+
+<clr-main-container>
+   
+    <clr-header class="header-2">
+       <div class="branding">
+         <a class="nav-link">
+           
+          <clr-icon shape="home" class="kth-home" size="24"></clr-icon>
+         
+          <span class="title" style="color:rgb(255, 145, 0);  text-transform: uppercase;font-weight: bold;">Mykathua.com</span>
+        </a>
+      </div>
+      <div class="header-nav" [clr-nav-level]="1">
+            <a class="nav-link" [routerLink] ="['/home']">
+                <span class="nav-text">Home</span>
+              </a>
+              <a class="nav-link" [routerLink] ="['/tweets']">
+                <span class="nav-text">Tweets</span>
+              </a>
+              <a class="nav-link" [routerLink] ="['/news']">
+                <span class="nav-text">News</span>
+              </a>
+              <a class="nav-link" [routerLink] ="['/music']">
+                <span class="nav-text">Music</span>
+              </a>
+              <a class="nav-link" [routerLink] ="['/photos']">
+                <span class="nav-text">Photos</span>
+              </a>
+              <a class="nav-link" [routerLink] ="['/vid']">
+                <span class="nav-text">Videos</span>
+              </a>
+      </div>
+      <form class="search">
+          <label for="search_input">
+              <input id="search_input" type="text" placeholder="Search for keywords...">
+          </label>
+      </form>
+      <div class="header-actions">
+          <a href="..." class="nav-link nav-icon" aria-label="settings">
+              <clr-icon shape="cog"></clr-icon>
+          </a>
+      </div>
+    </clr-header>
+    <div class="content-container">
+        <main class="content-area">
+                <router-outlet></router-outlet>
+        </main>
+        <!-- <nav class="sidenav" [clr-nav-level]="2">
+            ... if you want a sidenav that is, or omit this
+        </nav> -->
+    </div>
+    <div  style="background-color: #575757;">
+        <div class="clr-footer">
+            <span style="color:white">Footer</span>
+          </div>
+    </div>
+  
+</clr-main-container>
+

@@ -1,0 +1,56 @@
+<!-- <h1>Lates local and national news!!</h1>
+{"id":1,
+"title":"PM Modi reviews ministries’ performance",
+"link":"https://www.dailyexcelsior.com/pm-modi-reviews-ministries-performance/",
+"postdate":"2020-01-05T03:00:59+05:30","abstract":"PM Modi reviews ministries’ performance",
+"source":"DailyExcelsior.com"} -->
+<div class="clr-row" >
+    <div class="clr-col-lg-4 clr-col-md-4 clr-col-sm-4 clr-col-12" *ngFor="let newsItem of news.news.deNews;">
+<div class="card">
+  
+    <div class="card-img" *ngIf="newsItem.imgsrc != '' ">
+        <img src={{newsItem.imgsrc}}>
+    </div>
+    <div class="card-block">
+        <a href={{newsItem.link}} class="clickable">
+            <h4 class="card-title" style="color:blue">{{newsItem.title}}</h4>
+        </a>
+        <p class="card-text"> {{newsItem.abstract}}</p>
+    </div>
+  
+    <div class="card-footer">
+        <span>{{newsItem.source}} | {{newsItem.postdate}}</span>
+     &nbsp;|&nbsp; <span><a href={{newsItem.link}} class="card-link">Read</a></span>
+    </div>
+</div>
+</div>
+</div>
+    <!-- <div class="clr-row" >
+        <div class="clr-col-lg-4 clr-col-md-4 clr-col-sm-4 clr-col-12" *ngFor="let newsItem of news.news.deNews;">
+    <div class="card">
+        <div class="card-header">
+            {{newsItem.title}}
+        </div>
+        <div class="card-block">
+            
+            <div class="card-media-block">
+             
+                <img src={{newsItem.imgsrc}} class="card-media-image" *ngIf="newsItem.imgsrc != ''">
+                <div class="card-media-description">
+                    <span class="card-media-title">
+                       {{newsItem.title}}
+                    </span>
+                    <span class="card-media-text">
+                        {{newsItem.source}} | {{newsItem.postdate}}
+                    </span>
+                </div>
+            </div>
+            <div class="card-text">
+                {{newsItem.abstract}}
+            </div>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-sm btn-link">Action</button>
+        </div>
+    </div>
+        </div> -->
