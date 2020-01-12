@@ -16,7 +16,7 @@
     "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall":"echo \"preinstall step: installing dependences\" && cd mykathua-app && npm i && cd ../server && npm i",
-    "postinstall":"echo \"postinstall step: compiling app\" && cd mykathua-app && ng build --aot --target=production"
+    "postinstall":"echo \"postinstall step: compiling app\" && cd mykathua-app && ng build"
   },
   "repository": {
     "type": "git",
