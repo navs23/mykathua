@@ -4,7 +4,7 @@ const cache = require('memory-cache');
 var newsService = require('./news-scraper');
 var videoService = require('./services/youtube');
 const app = express()
-const port = 3000
+
 app.use(express.static('mykathua-app'))
 
 if (process.env.NODE_ENV || "development"){
@@ -37,7 +37,9 @@ else
     process.env.GOOGLE_API_KEY='AIzaSyDc2SwSwRntH9m1e21OL8btHcxl3TPwwI0';
     process.env.mode = "prod";
 }
+const port = process.env.PORT || 3000 ;
 let memCache = new cache.Cache();
+
 let cacheMiddleware = (duration) => {
     return (req, res, next) => {
         let key =  '__express__' + req.originalUrl || req.url
