@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -34,7 +34,12 @@ import { NewsService } from 'src/services/news.service';
 import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
 import { YoutubeService } from 'src/services/youtube.service';
 import { YoutubeResolver } from './videos/youtube.resolver';
-
+export class CustomHammerConfig extends HammerGestureConfig  {
+  overrides = {
+      pinch: { enable: false },
+      rotate: { enable: false }
+  };
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,9 +73,14 @@ import { YoutubeResolver } from './videos/youtube.resolver';
     MDBBootstrapModule.forRoot()
     
   ],
-  providers: [HttpClient,TwitterService ,YoutubeService,NewsService,TweetResolver,NewsResolver,YoutubeResolver],
+  providers: [HttpClient,TwitterService ,YoutubeService,NewsService,TweetResolver,NewsResolver,YoutubeResolver,
+    {
+      provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig 
+  }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
 
 
