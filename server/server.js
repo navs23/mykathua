@@ -58,10 +58,13 @@ let cacheMiddleware = (duration) => {
     }
 }
 app.get('/', (req, res) => {
-    res.render('index.html');
+    res.render('/mykathua-app/index.html');
     //res.send('Hello World!');
+});
+app.get('/index', (req, res) => {
+    //res.render('/mykathua-app/index.html');
+    res.send('Hello World!');
 })
-
 app.get('/api/tweets', (req, res) => {
      twitter.getTweets((err,tweets)=>{
         res.send(tweets);
