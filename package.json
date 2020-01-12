@@ -5,15 +5,18 @@
   "main": "index.js",
   "dependencies": {
     "axios": "^0.19.0",
-    "ngx-audio-player": "^8.0.2"
+    "ngx-audio-player": "^8.0.2",
+    "@angular/cli": "~8.0.6",
+    "@angular/compiler-cli": "~8.0.3"
+   
   },
   "devDependencies": {},
   "scripts": {
     "build": "cd mykathua-app && npm i && npm run build",
     "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preinstall":"cd mykathua-app && npm i && cd ../server && npm i",
-    "postinstall":"cd mykathua-app && ng build --aot --target=production"
+    "preinstall":"echo \"preinstall step: installing dependences\" && cd mykathua-app && npm i && cd ../server && npm i",
+    "postinstall":"echo \"postinstall step: compiling app\" && cd mykathua-app && ng build --aot --target=production"
   },
   "repository": {
     "type": "git",
