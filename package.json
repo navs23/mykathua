@@ -6,7 +6,7 @@
   "dependencies": {
     "@angular/cli": "~8.0.6",
     "@angular/compiler-cli": "~8.0.3",
-    "axios": "^0.19.1",
+    "axios": "^0.21.1",
     "ngx-audio-player": "^8.0.2"
   },
   "devDependencies": {},
