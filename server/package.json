@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "angular2-moment": "^1.9.0",
-    "async": "^3.1.0",
+    "async": "^3.2.2",
     "async-series": "0.0.1",
     "axios": "^0.19.1",
     "crawler": "^1.2.1",
